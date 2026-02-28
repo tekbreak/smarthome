@@ -1,0 +1,6 @@
+AuthType Digest
+AuthName "Tekbreak Network"
+AuthDigestDomain http://home-dashboard.tekbreak.com https://home-dashboard.tekbreak.com/
+AuthDigestProvider file
+AuthUserFile /home/tekbreak/web/passwd/smarthome
+Require valid-user

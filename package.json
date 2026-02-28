@@ -1,0 +1,103 @@
+{
+  "name": "smart-home",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Smart home dashboard, door sensor monitor, and Android WebView app",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "./start-development.sh",
+    "start:android": "./start-android.sh",
+    "start:debug": "DEVICE_STATUS_DEBUG=1 ./start-development.sh",
+    "start:client": "cd client && vite",
+    "start:server": "cd server && WS_INSECURE=1 node server.mjs",
+    "start:smart-home": "cd smart-home && node index.mjs",
+    "build": "cd client && vite build",
+    "preview": "cd client && vite preview",
+    "test": "cd client && vitest",
+    "test:smart-home": "cd smart-home && node tests/test_sensor.mjs",
+    "test:smart-home:dim": "cd smart-home && node tests/test_dim.mjs",
+    "test:smart-home:sync": "cd smart-home && node tests/test_sync.mjs",
+    "test:smart-home:ws": "cd smart-home && node tests/test_ws.mjs",
+    "sync-devices": "cd smart-home && node scripts/wizard-to-devices.mjs",
+    "deploy": "cd client && sh build.sh",
+    "android:build": "cd android && ./gradlew assembleProdDebug",
+    "android:install": "cd android && ./gradlew installProdDebug",
+    "android:uninstall": "adb uninstall com.tekbreak.homedashboard.dev || true; adb uninstall com.tekbreak.homedashboard || true"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@google-cloud/local-auth": "^2.1.0",
+    "@mui/icons-material": "^5.14.9",
+    "@mui/material": "^5.14.10",
+    "@reduxjs/toolkit": "^1.9.5",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@tuya/tuya-connector-nodejs": "^2.1.2",
+    "@uiw/color-convert": "^1.4.2",
+    "@uiw/react-color-wheel": "^1.4.2",
+    "axios": "^1.13.6",
+    "d3": "^7.8.5",
+    "dayjs": "^1.11.9",
+    "dotenv": "^16.6.1",
+    "dsbridge": "^3.1.4",
+    "googleapis": "^140.0.1",
+    "image-to-base64": "^2.2.0",
+    "lodash": "^4.17.21",
+    "prettier": "^3.0.3",
+    "react": "^18.2.0",
+    "react-color": "^2.19.3",
+    "react-dom": "^18.2.0",
+    "react-redux": "^8.1.2",
+    "react-router-dom": "^6.30.3",
+    "rxjs": "^7.8.1",
+    "sass": "^1.68.0",
+    "serialport": "^10.4.0",
+    "tuyapi": "github:codetheweb/tuyapi",
+    "typescript": "^4.9.5",
+    "use-sound": "^4.0.1",
+    "web-vitals": "^2.1.4",
+    "ws": "^8.19.0"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@testing-library/dom": "^10.4.1",
+    "@testing-library/react": "^16.3.2",
+    "@types/d3": "^7.4.1",
+    "@types/jest": "^27.5.2",
+    "@types/node": "^22.19.13",
+    "@types/react": "^18.2.22",
+    "@types/react-dom": "^18.2.7",
+    "@vitejs/plugin-react": "^4.7.0",
+    "eslint-config-prettier": "8.1.0",
+    "happy-dom": "^20.7.0",
+    "jsdom": "^28.1.0",
+    "path": "^0.12.7",
+    "vite": "^6.4.1",
+    "vitest": "^4.0.18"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "overrides": {
+    "axios": "^1.13.6"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  }
+}

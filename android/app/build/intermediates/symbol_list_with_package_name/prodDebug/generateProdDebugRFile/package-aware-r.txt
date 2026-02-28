@@ -1,0 +1,14 @@
+com.tekbreak.homedashboard
+id CameraView
+id activity_main_progress
+id activity_main_webview
+layout activity_main
+layout camera
+mipmap ic_launcher
+mipmap ic_launcher_adaptive_back
+mipmap ic_launcher_adaptive_fore
+string app_name
+string password
+string username
+style AppTheme
+xml network_security_config

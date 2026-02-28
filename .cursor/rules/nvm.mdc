@@ -1,0 +1,20 @@
+---
+description: Use nvm before running npm commands
+alwaysApply: true
+---
+
+# Node Version Manager
+
+Before running any npm commands (e.g. `npm install`, `npm run`, `npm test`), ensure Node is available via nvm:
+
+```bash
+source ~/.nvm/nvm.sh && nvm use && npm <command>
+```
+
+Or when already in a shell with nvm loaded:
+
+```bash
+nvm use && npm <command>
+```
+
+The project has a `.nvmrc` file (Node 22). Running `nvm use` selects the correct Node version so npm commands succeed.
