@@ -22,4 +22,4 @@ fi
 echo "[deploy] Using $SOURCE -> .env"
 cp "$SOURCE" .env
 
-cd client && sh build.sh
+cd client && bash build.sh
