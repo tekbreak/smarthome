@@ -22,7 +22,9 @@
     "test:smart-home:sync": "cd smart-home && node tests/test_sync.mjs",
     "test:smart-home:ws": "cd smart-home && node tests/test_ws.mjs",
     "sync-devices": "cd smart-home && node scripts/wizard-to-devices.mjs",
-    "deploy": "cd client && sh build.sh",
+    "deploy": "./deploy.sh",
+    "deploy:dev": "./deploy.sh dev",
+    "deploy:prod": "./deploy.sh prod",
     "android:build": "cd android && ./gradlew assembleProdDebug",
     "android:install": "cd android && ./gradlew installProdDebug",
     "android:uninstall": "adb uninstall com.tekbreak.homedashboard.dev || true; adb uninstall com.tekbreak.homedashboard || true"
