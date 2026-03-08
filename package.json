@@ -25,6 +25,7 @@
     "deploy": "./deploy.sh",
     "deploy:dev": "./deploy.sh dev",
     "deploy:prod": "./deploy.sh prod",
+    "upload": "./upload.sh",
     "android:build": "cd android && ./gradlew assembleProdDebug",
     "android:install": "cd android && ./gradlew installProdDebug",
     "android:uninstall": "adb uninstall com.tekbreak.homedashboard.dev || true; adb uninstall com.tekbreak.homedashboard || true"
