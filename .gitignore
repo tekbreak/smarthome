@@ -55,7 +55,6 @@ Thumbs.db
 
 # Secrets and credentials
 .env
-server/config.mjs
 server/google-auth/credentials.json
 server/google-auth/token.json
 server/data/google_credentials.json
